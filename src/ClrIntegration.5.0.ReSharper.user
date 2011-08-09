@@ -1,0 +1,67 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="56C62F36-6264-4698-897E-F20D98954B85/f:Message.cs" caret="61" fromTop="1" />
+      <File id="56C62F36-6264-4698-897E-F20D98954B85/f:MessageQueue.cs" caret="3488" fromTop="9" />
+      <File id="56C62F36-6264-4698-897E-F20D98954B85/f:IFlatMessage.cs" caret="0" fromTop="0" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Messages/f:IFlatMessage.cs" caret="83" fromTop="4" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:CollectionExtensions.cs" caret="71" fromTop="2" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:DataFieldExtensions.cs" caret="2534" fromTop="80" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:DateExtensions.cs" caret="36" fromTop="1" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:EnumerableExtensions.cs" caret="1518" fromTop="53" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:FlagsExtensions.cs" caret="19" fromTop="0" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:KeyValueListExtensions.cs" caret="76" fromTop="2" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:StringExtensions.cs" caret="9169" fromTop="279" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:XElementExtensions.cs" caret="198" fromTop="6" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:StreamExtensions.cs" caret="654" fromTop="6" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/f:Utilities.cs" caret="6220" fromTop="7" />
+      <File id="56C62F36-6264-4698-897E-F20D98954B85/d:Xml/f:XmlMessageBuilder.cs" caret="1853" fromTop="7" />
+      <File id="92D195BB-DC50-4927-A914-BED89565769C/f:IMapMessages.cs" caret="186" fromTop="8" />
+      <File id="92D195BB-DC50-4927-A914-BED89565769C/f:IQueryWrapper.cs" caret="60" fromTop="0" />
+      <File id="92D195BB-DC50-4927-A914-BED89565769C/f:Mappers.cs" caret="152" fromTop="4" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="56C62F36-6264-4698-897E-F20D98954B85/f:Message.cs" caret="61" fromTop="1" />
+      <File id="56C62F36-6264-4698-897E-F20D98954B85/f:MessageQueue.cs" caret="75" fromTop="1" />
+      <File id="56C62F36-6264-4698-897E-F20D98954B85/f:MessageQueue.cs" caret="2752" fromTop="7" />
+      <File id="56C62F36-6264-4698-897E-F20D98954B85/f:MessageQueue.cs" caret="3488" fromTop="9" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Messages/f:IFlatMessage.cs" caret="83" fromTop="4" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Messages/f:IFlatMessage.cs" caret="27" fromTop="0" />
+      <File id="56C62F36-6264-4698-897E-F20D98954B85/d:Xml/f:XmlMessageBuilder.cs" caret="117" fromTop="3" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:CollectionExtensions.cs" caret="71" fromTop="2" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:DataFieldExtensions.cs" caret="2534" fromTop="80" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:DateExtensions.cs" caret="36" fromTop="1" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:EnumerableExtensions.cs" caret="1518" fromTop="53" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:FlagsExtensions.cs" caret="19" fromTop="0" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:KeyValueListExtensions.cs" caret="76" fromTop="2" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:StreamExtensions.cs" caret="1619" fromTop="58" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:StringExtensions.cs" caret="9169" fromTop="279" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/d:Extensions/f:XElementExtensions.cs" caret="44" fromTop="1" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/f:Utilities.cs" caret="8307" fromTop="269" />
+      <File id="ECDA8658-1370-4006-969B-EE84E00C3BF7/f:Utilities.cs" caret="6220" fromTop="7" />
+      <File id="56C62F36-6264-4698-897E-F20D98954B85/d:Xml/f:XmlMessageBuilder.cs" caret="1853" fromTop="7" />
+      <File id="92D195BB-DC50-4927-A914-BED89565769C/f:IMapMessages.cs" caret="28" fromTop="0" />
+      <File id="92D195BB-DC50-4927-A914-BED89565769C/f:IMapMessages.cs" caret="186" fromTop="8" />
+      <File id="92D195BB-DC50-4927-A914-BED89565769C/f:IQueryWrapper.cs" caret="87" fromTop="0" />
+      <File id="92D195BB-DC50-4927-A914-BED89565769C/f:Mappers.cs" caret="92" fromTop="2" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

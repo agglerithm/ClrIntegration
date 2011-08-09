@@ -1,0 +1,14 @@
+C:\Projects\ClrIntegration\SqlInterface\bin\Debug\SqlInterface.dll
+C:\Projects\ClrIntegration\SqlInterface\bin\Debug\SqlInterface.pdb
+C:\Projects\ClrIntegration\SqlInterface\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\ClrIntegration\SqlInterface\obj\Debug\SqlInterface.dll
+C:\Projects\ClrIntegration\SqlInterface\obj\Debug\SqlInterface.pdb
+C:\Projects\ClrIntegration\src\SqlInterface\bin\Debug\SqlInterface.dll
+C:\Projects\ClrIntegration\src\SqlInterface\bin\Debug\SqlInterface.pdb
+C:\Projects\ClrIntegration\src\SqlInterface\bin\Debug\MassTransitEmulator.dll
+C:\Projects\ClrIntegration\src\SqlInterface\bin\Debug\MassTransitEmulator.pdb
+C:\Projects\ClrIntegration\src\SqlInterface\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\ClrIntegration\src\SqlInterface\obj\Debug\SqlInterface.dll
+C:\Projects\ClrIntegration\src\SqlInterface\obj\Debug\SqlInterface.pdb
+C:\Projects\ClrIntegration\src\SqlInterface\bin\Debug\CommonEntities.dll
+C:\Projects\ClrIntegration\src\SqlInterface\bin\Debug\CommonEntities.pdb

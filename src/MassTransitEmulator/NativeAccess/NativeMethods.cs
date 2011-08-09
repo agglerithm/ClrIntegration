@@ -1,0 +1,256 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using MassTransitEmulator.NativeAccess.Handles;
+
+namespace MassTransitEmulator.NativeAccess
+{
+    internal static class NativeMethods
+    {
+        public static Guid IID_IUnknown = new Guid("{00000000-0000-0000-C000-000000000046}");
+        public const int ACKNOWLEDGE_NEGATIVE_ARRIVAL = 4;
+        public const int ACKNOWLEDGE_NEGATIVE_RECEIVE = 8;
+        public const int ACKNOWLEDGE_NONE = 0;
+        public const int ACKNOWLEDGE_POSITIVE_ARRIVAL = 1;
+        public const int ACKNOWLEDGE_POSITIVE_RECEIVE = 2;
+        public const int ACKNOWLEDGE_FULL_REACH_QUEUE = 5;
+        public const int ACKNOWLEDGE_FULL_RECEIVE = 14;
+        public const int ACKNOWLEDGE_NOTACKNOWLEDGE_REACH_QUEUE = 4;
+        public const int ACKNOWLEDGE_NOTACKNOWLEDGE_RECEIVE = 12;
+        private const int ALG_CLASS_DATA_ENCRYPT = 24576;
+        private const int ALG_CLASS_HASH = 32768;
+        private const int ALG_SID_MD2 = 1;
+        private const int ALG_SID_MD4 = 2;
+        private const int ALG_SID_MD5 = 3;
+        private const int ALG_SID_SHA = 4;
+        private const int ALG_SID_MAC = 5;
+        private const int ALG_SID_RIPEMD = 6;
+        private const int ALG_SID_RIPEMD160 = 7;
+        private const int ALG_SID_SSL3SHAMD5 = 8;
+        private const int ALG_SID_RC2 = 2;
+        private const int ALG_SID_RC4 = 1;
+        private const int ALG_TYPE_ANY = 0;
+        private const int ALG_TYPE_BLOCK = 1536;
+        private const int ALG_TYPE_STREAM = 2048;
+        public const int CALG_MD2 = 32769;
+        public const int CALG_MD4 = 32770;
+        public const int CALG_MD5 = 32771;
+        public const int CALG_SHA = 32772;
+        public const int CALG_MAC = 32773;
+        public const int CALG_RC2 = 26114;
+        public const int CALG_RC4 = 26625;
+        public const int LOCK_WRITE = 1;
+        public const int LOCK_EXCLUSIVE = 2;
+        public const int LOCK_ONLYONCE = 4;
+        public const int STATFLAG_DEFAULT = 0;
+        public const int STATFLAG_NONAME = 1;
+        public const int STATFLAG_NOOPEN = 2;
+        public const int STGC_DEFAULT = 0;
+        public const int STGC_OVERWRITE = 1;
+        public const int STGC_ONLYIFCURRENT = 2;
+        public const int STGC_DANGEROUSLYCOMMITMERELYTODISKCACHE = 4;
+        public const int STREAM_SEEK_SET = 0;
+        public const int STREAM_SEEK_CUR = 1;
+        public const int STREAM_SEEK_END = 2;
+        public const int E_UNEXPECTED = -2147418113;
+        public const int E_NOTIMPL = -2147467263;
+        public const int E_OUTOFMEMORY = -2147024882;
+        public const int E_INVALIDARG = -2147024809;
+        public const int E_NOINTERFACE = -2147467262;
+        public const int E_POINTER = -2147467261;
+        public const int E_HANDLE = -2147024890;
+        public const int E_ABORT = -2147467260;
+        public const int E_FAIL = -2147467259;
+        public const int MANAGEMENT_BASE = 0;
+        public const int MANAGEMENT_ACTIVEQUEUES = 1;
+        public const int MANAGEMENT_PRIVATEQ = 2;
+        public const int MANAGEMENT_DSSERVER = 3;
+        public const int MANAGEMENT_CONNECTED = 4;
+        public const int MANAGEMENT_TYPE = 5;
+        public const int MACHINE_BASE = 200;
+        public const int MACHINE_SITE_ID = 201;
+        public const int MACHINE_ID = 202;
+        public const int MACHINE_PATHNAME = 203;
+        public const int MACHINE_CONNECTION = 204;
+        public const int MACHINE_ENCRYPTION_PK = 205;
+        public const int MAX_MESSAGE_ID_SIZE = 20;
+        public const int MAX_LABEL_LEN = 124;
+        public const int MESSAGE_AUTHENTICATION_LEVEL_NONE = 0;
+        public const int MESSAGE_AUTHENTICATION_LEVEL_ALWAYS = 1;
+        public const int MESSAGE_AUTHENTICATION_LEVEL_MSMQ10 = 2;
+        public const int MESSAGE_AUTHENTICATION_LEVEL_MSMQ20 = 4;
+        public const int MESSAGE_CLASS_ACCESS_DENIED = 32772;
+        public const int MESSAGE_CLASS_BAD_DESTINATION_QUEUE = 32768;
+        public const int MESSAGE_CLASS_BAD_ENCRYPTION = 32775;
+        public const int MESSAGE_CLASS_BAD_SIGNATURE = 32774;
+        public const int MESSAGE_CLASS_COULD_NOT_ENCRYPT = 32776;
+        public const int MESSAGE_CLASS_HOP_COUNT_EXCEEDED = 32773;
+        public const int MESSAGE_CLASS_NORMAL = 0;
+        public const int MESSAGE_CLASS_NOT_TRANSACTIONAL_QUEUE = 32777;
+        public const int MESSAGE_CLASS_NOT_TRANSACTIONAL_MESSAGE = 32778;
+        public const int MESSAGE_CLASS_PURGED = 32769;
+        public const int MESSAGE_CLASS_QUEUE_DELETED = 49152;
+        public const int MESSAGE_CLASS_QUEUE_EXCEED_QUOTA = 32771;
+        public const int MESSAGE_CLASS_QUEUE_PURGED = 49153;
+        public const int MESSAGE_CLASS_REACH_QUEUE = 2;
+        public const int MESSAGE_CLASS_REACH_QUEUE_TIMEOUT = 32770;
+        public const int MESSAGE_CLASS_RECEIVE = 16384;
+        public const int MESSAGE_CLASS_RECEIVE_TIMEOUT = 49154;
+        public const int MESSAGE_CLASS_REPORT = 1;
+        public const int MESSAGE_DELIVERY_EXPRESS = 0;
+        public const int MESSAGE_DELIVERY_RECOVERABLE = 1;
+        public const int MESSAGE_JOURNAL_NONE = 0;
+        public const int MESSAGE_JOURNAL_DEADLETTER = 1;
+        public const int MESSAGE_JOURNAL_JOURNAL = 2;
+        public const int MESSAGE_PRIVACY_LEVEL_NONE = 0;
+        public const int MESSAGE_PRIVACY_LEVEL_BODY = 1;
+        public const int MESSAGE_PROPID_BASE = 0;
+        public const int MESSAGE_PROPID_ACKNOWLEDGE = 6;
+        public const int MESSAGE_PROPID_ADMIN_QUEUE = 17;
+        public const int MESSAGE_PROPID_ADMIN_QUEUE_LEN = 18;
+        public const int MESSAGE_PROPID_APPSPECIFIC = 8;
+        public const int MESSAGE_PROPID_ARRIVEDTIME = 32;
+        public const int MESSAGE_PROPID_AUTHENTICATED = 25;
+        public const int MESSAGE_PROPID_AUTH_LEVEL = 24;
+        public const int MESSAGE_PROPID_BODY = 9;
+        public const int MESSAGE_PROPID_BODY_SIZE = 10;
+        public const int MESSAGE_PROPID_BODY_TYPE = 42;
+        public const int MESSAGE_PROPID_CLASS = 1;
+        public const int MESSAGE_PROPID_CONNECTOR_TYPE = 38;
+        public const int MESSAGE_PROPID_CORRELATIONID = 3;
+        public const int MESSAGE_PROPID_DELIVERY = 5;
+        public const int MESSAGE_PROPID_DEST_QUEUE = 33;
+        public const int MESSAGE_PROPID_DEST_QUEUE_LEN = 34;
+        public const int MESSAGE_PROPID_DEST_SYMM_KEY = 43;
+        public const int MESSAGE_PROPID_DEST_SYMM_KEY_LEN = 44;
+        public const int MESSAGE_PROPID_ENCRYPTION_ALG = 27;
+        public const int MESSAGE_PROPID_EXTENSION = 35;
+        public const int MESSAGE_PROPID_EXTENSION_LEN = 36;
+        public const int MESSAGE_PROPID_FIRST_IN_XACT = 50;
+        public const int MESSAGE_PROPID_HASH_ALG = 26;
+        public const int MESSAGE_PROPID_JOURNAL = 7;
+        public const int MESSAGE_PROPID_LABEL = 11;
+        public const int MESSAGE_PROPID_LABEL_LEN = 12;
+        public const int MESSAGE_PROPID_LAST_IN_XACT = 51;
+        public const int MESSAGE_PROPID_MSGID = 2;
+        public const int MESSAGE_PROPID_PRIORITY = 4;
+        public const int MESSAGE_PROPID_PRIV_LEVEL = 23;
+        public const int MESSAGE_PROPID_PROV_NAME = 48;
+        public const int MESSAGE_PROPID_PROV_NAME_LEN = 49;
+        public const int MESSAGE_PROPID_PROV_TYPE = 47;
+        public const int MESSAGE_PROPID_RESP_QUEUE = 15;
+        public const int MESSAGE_PROPID_RESP_QUEUE_LEN = 16;
+        public const int MESSAGE_PROPID_SECURITY_CONTEXT = 37;
+        public const int MESSAGE_PROPID_SENDERID = 20;
+        public const int MESSAGE_PROPID_SENDERID_LEN = 21;
+        public const int MESSAGE_PROPID_SENDERID_TYPE = 22;
+        public const int MESSAGE_PROPID_SENDER_CERT = 28;
+        public const int MESSAGE_PROPID_SENDER_CERT_LEN = 29;
+        public const int MESSAGE_PROPID_SENTTIME = 31;
+        public const int MESSAGE_PROPID_SIGNATURE = 45;
+        public const int MESSAGE_PROPID_SIGNATURE_LEN = 46;
+        public const int MESSAGE_PROPID_SRC_MACHINE_ID = 30;
+        public const int MESSAGE_PROPID_TIME_TO_BE_RECEIVED = 14;
+        public const int MESSAGE_PROPID_TIME_TO_REACH_QUEUE = 13;
+        public const int MESSAGE_PROPID_TRACE = 41;
+        public const int MESSAGE_PROPID_VERSION = 19;
+        public const int MESSAGE_PROPID_XACT_STATUS_QUEUE = 39;
+        public const int MESSAGE_PROPID_XACT_STATUS_QUEUE_LEN = 40;
+        public const int MESSAGE_PROPID_XACTID = 52;
+        public const int MESSAGE_PROPID_LOOKUPID = 60;
+        public const int MESSAGE_SENDERID_TYPE_NONE = 0;
+        public const int MESSAGE_SENDERID_TYPE_SID = 1;
+        public const int MESSAGE_TRACE_NONE = 0;
+        public const int MESSAGE_TRACE_SEND_ROUTE_TO_REPORT_QUEUE = 1;
+        public const int PROV_RSA_FULL = 1;
+        public const int PROV_RSA_SIG = 2;
+        public const int PROV_DSS = 3;
+        public const int PROV_FORTEZZA = 4;
+        public const int PROV_MS_EXCHANGE = 5;
+        public const int PROV_SSL = 6;
+        public const int PROV_STT_MER = 7;
+        public const int PROV_STT_ACQ = 8;
+        public const int PROV_STT_BRND = 9;
+        public const int PROV_STT_ROOT = 10;
+        public const int PROV_STT_ISS = 11;
+        public const int QUEUE_ACCESS_RECEIVE = 1;
+        public const int QUEUE_ACCESS_SEND = 2;
+        public const int QUEUE_ACCESS_PEEK = 32;
+        public const int QUEUE_ACCESS_ADMIN = 128;
+        public const int QUEUE_ACTION_RECEIVE = 0;
+        public const int QUEUE_ACTION_PEEK_CURRENT = -2147483648;
+        public const int QUEUE_ACTION_PEEK_NEXT = -2147483647;
+        internal const int LOOKUP_PEEK_MASK = 1073741840;
+        internal const int LOOKUP_RECEIVE_MASK = 1073741856;
+        public const int QUEUE_AUTHENTICATE_NONE = 0;
+        public const int QUEUE_AUTHENTICATE_AUTHENTICATE = 1;
+        public const int QUEUE_JOURNAL_NONE = 0;
+        public const int QUEUE_JOURNAL_JOURNAL = 1;
+        public const int QUEUE_PRIVACY_LEVEL_NONE = 0;
+        public const int QUEUE_PRIVACY_LEVEL_OPTIONAL = 1;
+        public const int QUEUE_PRIVACY_LEVEL_BODY = 2;
+        public const int QUEUE_PROPID_BASE = 100;
+        public const int QUEUE_PROPID_INSTANCE = 101;
+        public const int QUEUE_PROPID_TYPE = 102;
+        public const int QUEUE_PROPID_PATHNAME = 103;
+        public const int QUEUE_PROPID_JOURNAL = 104;
+        public const int QUEUE_PROPID_QUOTA = 105;
+        public const int QUEUE_PROPID_BASEPRIORITY = 106;
+        public const int QUEUE_PROPID_JOURNAL_QUOTA = 107;
+        public const int QUEUE_PROPID_LABEL = 108;
+        public const int QUEUE_PROPID_CREATE_TIME = 109;
+        public const int QUEUE_PROPID_MODIFY_TIME = 110;
+        public const int QUEUE_PROPID_AUTHENTICATE = 111;
+        public const int QUEUE_PROPID_PRIV_LEVEL = 112;
+        public const int QUEUE_PROPID_TRANSACTION = 113;
+        public const int QUEUE_PROPID_MULTICAST_ADDRESS = 125;
+        public const int QUEUE_SHARED_MODE_DENY_NONE = 0;
+        public const int QUEUE_SHARED_MODE_DENY_RECEIVE = 1;
+        public const int QUEUE_TRANSACTION_NONE = 0;
+        public const int QUEUE_TRANSACTION_MTS = 1;
+        public const int QUEUE_TRANSACTION_XA = 2;
+        public const int QUEUE_TRANSACTION_SINGLE = 3;
+        public const int QUEUE_TRANSACTIONAL_NONE = 0;
+        public const int QUEUE_TRANSACTIONAL_TRANSACTIONAL = 1;
+        public const int MQ_ERROR_SECURITY_DESCRIPTOR_TOO_SMALL = -1072824285;
+        public const int MQ_OK = 0;
+        public const int TRUSTEE_IS_SID = 0;
+        public const int TRUSTEE_IS_NAME = 1;
+        public const int TRUSTEE_IS_USER = 1;
+        public const int TRUSTEE_IS_GROUP = 2;
+        public const int TRUSTEE_IS_DOMAIN = 3;
+        public const int TRUSTEE_IS_ALIAS = 4;
+        public const int TRUSTEE_IS_WELL_KNOWN_GROUP = 5;
+        public const int DACL_SECURITY_INFORMATION = 4;
+        public const int GRANT_ACCESS = 1;
+        public const int SET_ACCESS = 2;
+        public const int DENY_ACCESS = 3;
+        public const int REVOKE_ACCESS = 4;
+        public const int NO_MULTIPLE_TRUSTEE = 0;
+        public const int ERROR_SUCCESS = 0;
+        public const int SECURITY_DESCRIPTOR_REVISION = 1;
+
+        static NativeMethods()
+        {
+        }
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
+        public static extern int FormatMessage(int dwFlags, IntPtr lpSource, int dwMessageId, int dwLanguageId, StringBuilder lpBuffer, int nSize, IntPtr arguments);
+
+        [DllImport("mqrt.dll", EntryPoint = "MQGetSecurityContextEx", CharSet = CharSet.Unicode)]
+        private static extern int IntMQGetSecurityContextEx(IntPtr lpCertBuffer, int dwCertBufferLength, out SecurityContextHandle phSecurityContext);
+
+        public static int MQGetSecurityContextEx(out SecurityContextHandle securityContext)
+        {
+            try
+            {
+                return NativeMethods.IntMQGetSecurityContextEx(IntPtr.Zero, 0, out securityContext);
+            }
+            catch (DllNotFoundException ex)
+            {
+                throw new InvalidOperationException(Res.GetString("MSMQNotInstalled"));
+            }
+        }
+    }
+}

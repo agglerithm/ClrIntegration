@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<x:XmlMessageEnvelope xmlns:x="MassTransit.Serialization.XmlMessageEnvelope, MassTransit, Version=0.8.0.46, Culture=neutral, PublicKeyToken=null" xmlns:m="EdiMessages.OrderRequestReceivedMessage, EdiMessages, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null" xmlns:s="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:c="AFPST.Common.Structures.Customer, AFPST.Common, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null" xmlns:c1="AFPST.Common.Structures.CustomerAliases, AFPST.Common, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null" xmlns:t="AFPST.Common.Structures.TermsOfSale, AFPST.Common, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null" xmlns:d="System.Decimal, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:i="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:s2="AFPST.Common.Structures.Address, AFPST.Common, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null" xmlns:a="AFPST.Common.Structures.AddressCode, AFPST.Common, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null" xmlns:l="System.Collections.Generic.List`1[[EdiMessages.CustomerOrderLine, EdiMessages, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:c3="EdiMessages.CustomerOrderLine, EdiMessages, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null" xmlns:g="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:b="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:s4="EdiMessages.ServiceLevel, EdiMessages, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null" xmlns:n="System.Collections.Generic.List`1[[System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <m:Message>
+    <s:TempOrderId>Temp_0</s:TempOrderId>
+    <s:BusinessProcessName>WWT Purchase Order Processing</s:BusinessProcessName>
+    <s:RequestDate>6/22/2011</s:RequestDate>
+    <s:CustomerPO>1954062</s:CustomerPO>
+    <c:Customer>
+      <c1:CustomerIDs>
+        <s:LegacyCustomerID>WWTI01</s:LegacyCustomerID>
+        <s:SytelineCustomerID>WWTI001</s:SytelineCustomerID>
+        <s:AmtechCustomerID>wwt</s:AmtechCustomerID>
+      </c1:CustomerIDs>
+      <s:Salesperson>HA</s:Salesperson>
+      <s:CustomerName>Worldwide Technologies</s:CustomerName>
+      <t:Terms>
+        <d:DiscountPercent>0</d:DiscountPercent>
+        <i:DiscountDays>0</i:DiscountDays>
+        <i:NetDays>0</i:NetDays>
+      </t:Terms>
+    </c:Customer>
+    <s2:ShipToAddress>
+      <s:AddressType>ST</s:AddressType>
+      <a:AddressCode>
+        <s:InternalCode>000000000000110</s:InternalCode>
+        <s:CustomerCode>AMC</s:CustomerCode>
+      </a:AddressCode>
+      <s:Country>US</s:Country>
+    </s2:ShipToAddress>
+    <s:CustomerBankDescription>WWT Operating</s:CustomerBankDescription>
+    <l:LineItems>
+      <c3:CustomerOrderLine>
+        <g:CorrelationId>d2439b1e-a683-4d1f-b47e-4013c429f448</g:CorrelationId>
+        <i:OrderMultiple>0</i:OrderMultiple>
+        <s:CustomerPartNumber>R810-A00</s:CustomerPartNumber>
+        <i:RequestedQuantity>75</i:RequestedQuantity>
+        <d:RequestedPrice>8.374</d:RequestedPrice>
+        <s:Notes />
+        <s:CustomerPO>1954062</s:CustomerPO>
+        <c1:CustomerIDs>
+          <s:LegacyCustomerID>WWTI01</s:LegacyCustomerID>
+          <s:SytelineCustomerID>WWTI001</s:SytelineCustomerID>
+          <s:AmtechCustomerID>wwt</s:AmtechCustomerID>
+        </c1:CustomerIDs>
+        <b:TestMode>false</b:TestMode>
+        <s:RequestNumber>168232</s:RequestNumber>
+        <i:LineNumber>0</i:LineNumber>
+      </c3:CustomerOrderLine>
+    </l:LineItems>
+    <s:GeographicLocation>Austin</s:GeographicLocation>
+    <s:SpecificLocationNumber />
+    <s:PhoneNumber />
+    <s:BusinessPartnerCode>WWT</s:BusinessPartnerCode>
+    <i:BusinessPartnerNumber>0</i:BusinessPartnerNumber>
+    <s:ControlNumber>cf45208c-7198-48b2-835c-971489870729</s:ControlNumber>
+    <i:DocumentId>850</i:DocumentId>
+    <s4:LevelOfService>Ground</s4:LevelOfService>
+    <b:IsBackorder>false</b:IsBackorder>
+    <n:Notes />
+  </m:Message>
+  <s:SourceAddress>msmq://automation2/wwt_mrn_request_handler?tx=false</s:SourceAddress>
+  <s:DestinationAddress>msmq://automation2/mt_orders_in?tx=false</s:DestinationAddress>
+  <i:RetryCount>0</i:RetryCount>
+  <s:MessageType>EdiMessages.OrderRequestReceivedMessage, EdiMessages</s:MessageType>
+</x:XmlMessageEnvelope>
+
+
+<x:XmlMessageEnvelope xmlns:x="MassTransitEmulator.XmlMessageEnvelope, MassTransitEmulator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null" xmlns:m="CommonEntities.AcknowledgedOrderLine, CommonEntities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, Version=0.0.1.0, Culture=neutral, PublicKeyToken=null" xmlns:s="System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:i="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:d="System.Decimal, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:dt="System.DateTime, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <m:Message>
+    <s:ItemDescription>P/N AEFE</s:ItemDescription>
+    <s:ItemID>FIN234098392</s:ItemID>
+    <s:CustomerPartNumber>AEFE-A01</s:CustomerPartNumber>
+    <i:RequestedQuantity>110</i:RequestedQuantity>
+    <i:ActualQuantity>100</i:ActualQuantity>
+    <d:RequestedPrice>1</d:RequestedPrice>
+    <d:ActualPrice>1</d:ActualPrice>
+    <s:LineNumber>1</s:LineNumber>
+    <dt:EstimatedDeliveryDate>7/18/2011 12:00:00 AM</dt:EstimatedDeliveryDate>
+  </m:Message>
+  <s:SourceAddress>jreeselaptop2\mt_orders_outautomation2\mt_orders_in</s:SourceAddress>
+  <s:DestinationAddress />
+  <i:RetryCount />0<s:MessageType />CommonEntities.AcknowledgedOrderLine, CommonEntities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</x:XmlMessageEnvelope>

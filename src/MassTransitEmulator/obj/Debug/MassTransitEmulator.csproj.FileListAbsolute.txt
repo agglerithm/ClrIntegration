@@ -1,0 +1,7 @@
+C:\Projects\ClrIntegration\src\MassTransitEmulator\bin\Debug\MassTransitEmulator.dll
+C:\Projects\ClrIntegration\src\MassTransitEmulator\bin\Debug\MassTransitEmulator.pdb
+C:\Projects\ClrIntegration\src\MassTransitEmulator\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\ClrIntegration\src\MassTransitEmulator\obj\Debug\MassTransitEmulator.dll
+C:\Projects\ClrIntegration\src\MassTransitEmulator\obj\Debug\MassTransitEmulator.pdb
+C:\Projects\ClrIntegration\src\MassTransitEmulator\bin\Debug\CommonEntities.dll
+C:\Projects\ClrIntegration\src\MassTransitEmulator\bin\Debug\CommonEntities.pdb
